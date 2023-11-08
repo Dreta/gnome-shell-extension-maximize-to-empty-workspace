@@ -15,8 +15,8 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
-const Meta = imports.gi.Meta;
-const Gio = imports.gi.Gio;
+import Meta from 'gi://Meta';
+import Gio from 'gi://Gio';
 //  _mutterSettings.get_boolean('workspaces-only-on-primary');
 //  _mutterSettings.get_boolean('dynamic-workspaces');
 
@@ -25,7 +25,7 @@ const _handles = [];
 const _windowids_maximized = {};
 const _windowids_size_change = {};
 
-class Extension {
+export default class Extension {
  
     constructor() {
     }
@@ -341,6 +341,3 @@ class Extension {
     }
 }
 
-function init() {
-    return new Extension();
-}
